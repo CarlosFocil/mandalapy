@@ -6,12 +6,13 @@ from math import pi
 
 """This function creates mandalas (adaptation from fronkonstin R code)"""
 
+#Modify the following parameters in order to get different figures
 it = 3 #Number of iterations (how many times the equidistant points will be generated)
-points = 3 #Number of points to draw
+points = 5 #Number of points to draw
 radius = 2 #Factor of expansion or compression
 f1,f2 = 10,10 #Figure size
 
-def MandalaPy(it,points,raidus,f1,f2):
+def MandalaPy(it,points,radius):
     angles = np.linspace(0,2*pi*(1-1/points), points) + pi/2
     x,y = 0,0
     df = pd.DataFrame([[x,y]], columns = ['x','y']) #Initial center
@@ -29,8 +30,7 @@ def MandalaPy(it,points,raidus,f1,f2):
     voronoi_plot_2d(mandala, show_points = False, show_vertices = False, ), plt.axis('off'), plt.savefig('mandala1.png', dpi = 100)
     return plt.show()
 
-print(MandalaPy(it,points,radius,f1,f2))
+print(MandalaPy(it,points,radius))
 
 
-plt.savefig('mandala.png')
-
+plt.savefig('my_mandala.png', dpi = 50)
