@@ -39,6 +39,3 @@ def MandalaPy(it,points,radius):
     return plt.show()
 
 print(MandalaPy(it,points,radius))
-
-
-plt.savefig('my_mandala.png', dpi = 80)
