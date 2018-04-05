@@ -4,10 +4,18 @@ import numpy as np
 import pandas as pd
 from math import pi
 
-"""This function creates mandalas (adaptation from fronkonstin R code)"""
+"""This function creates mandalas (adaptation from fronkonstin R code)
+
+Change the function _plotutils.py from scipy spatial functions.
+In the line 225 of the code (highlighted on the link), change: linestyle = 'dashed' to linestyle = 'solid', and save the function.
+
+Link to the scipy repository:
+https://github.com/scipy/scipy/blob/master/scipy/spatial/_plotutils.py#L225
+
+"""
 
 #Modify the following parameters in order to get different figures
-it = 3 #Number of iterations (how many times the equidistant points will be generated)
+it = 4 #Number of iterations (how many times the equidistant points will be generated)
 points = 5 #Number of points to draw
 radius = 2 #Factor of expansion or compression
 f1,f2 = 10,10 #Figure size
@@ -33,4 +41,4 @@ def MandalaPy(it,points,radius):
 print(MandalaPy(it,points,radius))
 
 
-plt.savefig('my_mandala.png', dpi = 50)
+plt.savefig('my_mandala.png', dpi = 80)
