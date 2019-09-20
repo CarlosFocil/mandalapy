@@ -1,17 +1,13 @@
-from scipy.spatial import Voronoi, voronoi_plot_2d
+from scipy.spatial import Voronoi
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from math import pi
 
-"""This function creates mandalas (adaptation from fronkonstin R code)
+from helpers import voronoi_plot_2d
 
-Change the function _plotutils.py from scipy spatial functions.
-In the line 225 of the code (highlighted on the link), change: linestyle = 'dashed' to linestyle = 'solid', and save the function.
-
-Link to the scipy repository:
-https://github.com/scipy/scipy/blob/master/scipy/spatial/_plotutils.py#L225
-
+"""This function creates mandalas.
+This is a Python port of Fronkonstin's R code: https://fronkonstin.com/2018/02/14/mandalas/
 """
 
 #Modify the following parameters in order to get different figures
