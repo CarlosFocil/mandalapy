@@ -31,7 +31,7 @@ def MandalaPy(it,points,radius):
     mandala = Voronoi(df)
     fig_size = plt.rcParams["figure.figsize"]
     fig_size[0], fig_size[1] = f1,f2
-    voronoi_plot_2d(mandala, show_points = False, show_vertices = False, ), plt.axis('off'), plt.savefig('mandala1.png', dpi = 100)
+    voronoi_plot_2d(mandala, show_points = False, show_vertices = False, ), plt.axis('off'), plt.gca().set_aspect('equal', adjustable='box'), plt.savefig('mandala1.png', dpi = 100)
     return plt.show()
 
 print(MandalaPy(it,points,radius))
