@@ -1,5 +1,6 @@
 # Mandalapy
 This is a Python port of Anotonio Sanchez's R code: https://fronkonstin.com/2018/02/14/mandalas/
+
 Part of this code was used as a tutorial for spatial data structures and algorithms with SciPy: https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html
 
 Enjoy making beautiful mandalas modifying the specified parameters to obtain different figures.
